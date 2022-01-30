@@ -32,3 +32,11 @@ jobs:
         with:
           name: dsm3615xs70142218
           path: ./redpill-DS3615xs_7.0*.img
+          
+      - name: Build docker image2
+        run:
+          bash build-ds918-7.0.1.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: dsm918
+          path: ./redpill-DS918_7.0*.img
